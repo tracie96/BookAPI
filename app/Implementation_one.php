@@ -20,7 +20,7 @@ class Students
             if(in_array($requestedBook,$this->bookAvailable)){
                 for($i=0; $i < count($this->bookAvailable); $i++){
                     if($this->bookAvailable[$i] == $requestedBook){
-                        unset($this->books[$i]);
+                        unset($this->bookAvailable[$i]);
                     }
                 }
                 $response="Have your Book";
