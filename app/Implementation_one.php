@@ -17,9 +17,9 @@ class Students
             throw new Exception('Numeric priority value not expected');
         }
         if(strtolower($role) == "Senior"){
-            if(in_array($requestedBook,$this->books)){
-                for($i=0; $i < count($this->books); $i++){
-                    if($this->books[$i] == $requestedBook){
+            if(in_array($requestedBook,$this->bookAvailable)){
+                for($i=0; $i < count($this->bookAvailable); $i++){
+                    if($this->bookAvailable[$i] == $requestedBook){
                         unset($this->books[$i]);
                     }
                 }
